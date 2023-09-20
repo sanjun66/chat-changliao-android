@@ -1,0 +1,107 @@
+import com.legend.versioncontroller.*
+
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id "com.legend.versioncontroller"
+}
+
+android {
+    compileSdkVersion COMPILE_SDK_VERSION as int
+    buildToolsVersion BUILD_TOOLS_VERSION as String
+
+    dexOptions {
+        javaMaxHeapSize "8g" //specify the heap size for the dex process
+        //预编译
+        preDexLibraries = true //delete the already predexed libraries
+        //线程数
+        threadCount = 8
+    }
+
+    defaultConfig {
+        applicationId "com.basestonedata.instalment"
+        minSdkVersion BuildVersionTool.MIN_SDK_VERSION as int
+        targetSdkVersion BuildVersionTool.TARGET_SDK_VERSION as int
+        versionName BuildVersionTool.VERSION_NAME as String
+        versionCode BuildVersionTool.VERSION_CODE as int
+        multiDexEnabled true
+        aaptOptions.cruncherEnabled = false
+        aaptOptions.useNewCruncher = false
+
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+        ndk {
+            abiFilters 'arm64-v8a'
+        }
+    }
+
+    dataBinding {
+        enabled = true
+    }
+
+    signingConfigs {
+        beta {
+            keyAlias RELEASE_KEY_ALIAS
+            keyPassword RELEASE_KEY_PASSWORD
+            storeFile file(RELEASE_STORE_FILE)
+            storePassword RELEASE_STORE_PASSWORD
+            v2SigningEnabled false
+        }
+        debug {
+            storeFile file(DEBUG_STORE_FILE)
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    buildTypes {
+        debug {
+            splits.abi.enable = false
+            splits.density.enable = false
+            debuggable true
+        }
+
+        beta {
+            debuggable true
+            manifestPlaceholders = [NIM_KEY: '7137dc7c33accb9300c1501abb69fd5b', network_security_config: '@xml/network_security_config_debug']
+//            minifyEnabled true
+            //shrinkResources true
+            zipAlignEnabled true
+            signingConfig signingConfigs.beta
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField('String', 'APP_ID', '"BOD3HhpW"')
+            buildConfigField('String', 'APP_KEY', '"TMwZm3eR"')
+        }
+    }
+
+    sourceSets {  // 配置狼人杀的代码和小象代码融合的地方
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    lint {
+        abortOnError false
+        checkReleaseBuilds false
+        ignoreWarnings true
+        quiet true
+    }
+
+}
+
+dependencies {
+
+    implementation KotlinDependencies.kotlin
+    implementation KotlinDependencies.kotlin_core
+
+}

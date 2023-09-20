@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ui_content_spacing_horizontal" format="dimension" /> <!-- margin 和 padding 等使用的内容通用水平间距 -->
+
+    <attr name="ui_alpha_pressed" format="float" />
+    <attr name="ui_alpha_disabled" format="float" />
+
+    <!--**********************************************
+    *                  ui common color               *
+    ***********************************************-->
+    <attr name="ui_config_color_blue" format="color" />
+    <attr name="ui_config_color_red" format="color" />
+    <attr name="ui_config_color_black" format="color" />
+    <attr name="ui_config_color_link" format="color" />
+    <attr name="ui_config_color_pressed" format="color" />
+
+    <!--**********************************************
+    *                  ui dialog                     *
+    ***********************************************-->
+
+    <attr name="ui_dialog_min_width" format="dimension" />
+    <attr name="ui_dialog_max_width" format="dimension" />
+    <attr name="ui_dialog_inset_hor" format="dimension" />
+    <attr name="ui_dialog_inset_ver" format="dimension" />
+    <attr name="ui_dialog_background_dim_amount" format="float" />
+    <attr name="ui_dialog_padding_horizontal" format="dimension" />
+
+    <attr name="ui_dialog_radius" format="dimension" />
+    <attr name="ui_dialog_width_scale" format="float" />
+    <attr name="ui_dialog_title_style" format="reference" />
+    <attr name="ui_dialog_message_content_style" format="reference" />
+    <attr name="ui_dialog_action_container_style" format="reference" />
+    <attr name="ui_dialog_action_style" format="reference" />
+    <attr name="ui_dialog_edit_content_style" format="reference" />
+</resources>

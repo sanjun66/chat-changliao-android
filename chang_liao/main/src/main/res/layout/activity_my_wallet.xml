@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@mipmap/ic_wallet_icon"
+            android:layout_marginTop="60dp"/>
+
+        <TextView
+            android:id="@+id/tv_money_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="@string/wallet_balance_tip"
+            android:textSize="16sp"
+            android:textColor="@color/text_grey"
+            android:layout_marginTop="30dp" />
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="999999999"
+            android:text="---"
+            android:textSize="24sp"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/tv_recharge"
+            android:layout_width="160dp"
+            android:layout_height="44dp"
+            android:background="@drawable/shape_primary_solid_btn"
+            android:gravity="center"
+            android:text="@string/recharge"
+            android:textSize="14sp"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/tv_withdraw"
+            android:layout_width="160dp"
+            android:layout_height="44dp"
+            android:text="@string/withdraw"
+            android:background="@drawable/shape_grey_btn"
+            android:gravity="center"
+            android:textSize="14sp"
+            android:textColor="@color/black"
+            android:layout_marginTop="16dp"/>
+
+        <LinearLayout
+            android:id="@+id/llt_withdraw_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            android:layout_marginBottom="140dp"
+            tools:visibility="visible"
+            android:visibility="invisible">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/manager_my"
+                android:textSize="11sp"
+                android:textColor="@color/text_grey"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/withdraw_account"
+                android:textSize="12sp"
+                android:textColor="@color/primary_color"
+                android:layout_marginStart="2dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

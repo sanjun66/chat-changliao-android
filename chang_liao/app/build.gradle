@@ -1,0 +1,104 @@
+import com.legend.versioncontroller.*
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.legend.versioncontroller'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+//    id 'com.huawei.agconnect'
+}
+
+android {
+    namespace 'com.legend.sochat'
+    compileSdk BuildVersionTool.COMPILE_SDK_VERSION as int
+
+    defaultConfig {
+        applicationId "com.kaiyiweitong.weilian"
+        minSdk BuildVersionTool.MIN_SDK_VERSION as int
+        targetSdk BuildVersionTool.TARGET_SDK_VERSION as int
+        versionCode 107
+        versionName "1.0.7"
+
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        ndk {
+            //选择要添加的对应 cpu 类型的 .so 库。
+            abiFilters 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            // 还可以添加 'x86', 'x86_64', 'mips', 'mips64'
+        }
+        manifestPlaceholders = [
+                JPUSH_PKGNAME : applicationId,
+                JPUSH_APPKEY : "97c48c0af13a79ee695b4f08", //JPush 上注册的包名对应的 Appkey.
+                JPUSH_CHANNEL : "JPush100", //暂时填写默认值即可.
+        ]
+
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+
+    }
+    signingConfigs {
+        release {
+            keyAlias BuildVersionTool.RELEASE_KEY_ALIAS
+            keyPassword BuildVersionTool.RELEASE_KEY_PASSWORD
+            storeFile file(BuildVersionTool.RELEASE_STORE_FILE)
+            storePassword BuildVersionTool.RELEASE_STORE_PASSWORD
+            v2SigningEnabled true
+        }
+    }
+//keytool -genkey -alias sochat -keypass 888888 -keyalg RSA -keysize 2048 -validity 36500 -keystore /Users/young1/Desktop/AndroidProject/lijian/sochat/so_chat/app/keystore/release.jks -storepass 888888 -storetype pkcs12
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.release
+//            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    buildFeatures {
+        viewBinding true
+        dataBinding true
+    }
+
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+//    implementation GetTuiDependencies.huaweizersion   // 华为
+//    implementation GetTuiDependencies.xiaomiVersion   // 小米
+//    implementation GetTuiDependencies.oppoVersion  // oppo
+//    implementation GetTuiDependencies.vivoVersion  // vivo
+//    implementation GetTuiDependencies.meizuVersion   // 魅族
+    implementation KotlinDependencies.kotlin_core
+    implementation AndroidXDependencies.appcompat
+    implementation AndroidXDependencies.material
+    implementation AndroidXDependencies.constraint
+    implementation KotlinDependencies.navigation_fragment_ktx
+    implementation KotlinDependencies.navigation_ui_ktx
+    implementation RouterDependencies.router
+    kapt RouterDependencies.router_compile
+    implementation project(':main')
+    implementation project(':imkit')
+    // 融云推送
+//    implementation "cn.rongcloud.sdk.push:rong:5.6.0"
+//    implementation 'com.google.firebase:firebase-core:21.1.0'
+//    // 极光推送
+//    implementation 'cn.jiguang.sdk:jpush:5.0.4'
+    // 接入 FCM 厂商
+//    implementation 'com.google.firebase:firebase-messaging:23.0.5'
+//    implementation 'cn.jiguang.sdk.plugin:fcm:5.0.0'
+
+}

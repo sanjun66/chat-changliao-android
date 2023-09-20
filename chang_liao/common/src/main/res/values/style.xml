@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="primary_btn_style">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/ui_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/shape_primary_solid_btn</item>
+        <item name="android:layout_height">50dp</item>
+        <item name="android:layout_marginStart">25dp</item>
+        <item name="android:layout_marginEnd">25dp</item>
+    </style>
+
+    <declare-styleable name="setting_item_view">
+        <attr name="item_height" format="dimension"/>
+        <attr name="icon_res" format="reference"/>
+        <attr name="left_icon_height" format="dimension"/>
+        <attr name="left_icon_width" format="dimension"/>
+        <attr name="content_text" format="string"/>
+        <attr name="content_text_size" format="dimension"/>
+        <attr name="content_text_color" format="color"/>
+        <attr name="content_text_bold" format="boolean"/>
+        <attr name="tips_text" format="string"/>
+        <attr name="arrow_res" format="reference"/>
+        <attr name="arrow_visibility" format="integer"/>
+        <attr name="switch_btn_visibility" format="integer"/>
+        <attr name="left_icon_visibility" format="integer"/>
+        <attr name="line_visibility" format="integer"/>
+    </declare-styleable>
+
+    <style name="user_center_right_image_style">
+        <item name="android:layout_width">8dp</item>
+        <item name="android:layout_height">12dp</item>
+        <item name="android:layout_centerVertical">true</item>
+        <item name="android:layout_marginRight">15dp</item>
+        <item name="android:src">@mipmap/ic_right_arrow_black</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="Theme.AppCompat.Empty" parent=""/>
+
+    <style name="dialog" parent="AppTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:backgroundDimAmount">0.5</item>
+        <!--显示区域以外是否使用黑色半透明背景-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="dialog2" parent="AppTheme">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <!--显示区域以外是否使用黑色半透明背景-->
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary_color</item>
+        <item name="colorPrimaryDark">@color/ui_primary_variant</item>
+    </style>
+
+    <declare-styleable name="ProgressTextView2">
+        <attr name="ptv2_bg_color" format="color" />
+        <attr name="ptv2_fg_color" format="color" />
+        <attr name="ptv2_stroke_width" format="dimension" />
+        <attr name="ptv2_progress" format="integer" />
+    </declare-styleable>
+
+    <style name="line2" parent="AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">0.5dp</item>
+        <item name="android:background">@color/ui_line_bg</item>
+    </style>
+
+    <style name="bottomToTopAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/bottomview_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/bottomview_anim_exit</item>
+    </style>
+
+    <declare-styleable name="ClearWriteEditText">
+        <attr name="et_right_image" format="reference" />
+        <attr name="et_left_image" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="SwitchButton">
+        <attr name="kswThumbDrawable" format="reference" />
+        <attr name="kswThumbColor" format="color|reference" />
+        <attr name="kswThumbMargin" format="dimension|reference" />
+        <attr name="kswThumbMarginTop" format="dimension|reference" />
+        <attr name="kswThumbMarginBottom" format="dimension|reference" />
+        <attr name="kswThumbMarginLeft" format="dimension|reference" />
+        <attr name="kswThumbMarginRight" format="dimension|reference" />
+        <attr name="kswThumbWidth" format="dimension|reference" />
+        <attr name="kswThumbHeight" format="dimension|reference" />
+        <attr name="kswThumbRadius" format="dimension|reference" />
+        <attr name="kswBackRadius" format="dimension|reference" />
+        <attr name="kswBackDrawable" format="reference" />
+        <attr name="kswBackColor" format="color|reference" />
+        <attr name="kswFadeBack" format="boolean" />
+        <attr name="kswBackMeasureRatio" format="float" />
+        <attr name="kswAnimationDuration" format="integer" />
+        <attr name="kswTintColor" format="color|reference" />
+        <attr name="kswTextOn" format="string" />
+        <attr name="kswTextOff" format="string" />
+        <attr name="kswTextMarginH" format="dimension" />
+    </declare-styleable>
+
+</resources>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    单击事件-->
+    <attr name="ui_on_click_command" format="reference" />
+    <!--    是否支持快速点击, 默认为false不支持, 1秒内多次点击算一次-->
+    <attr name="ui_support_quick_click" format="boolean" />
+    <!--    editText字符改变事件-->
+    <attr name="ui_on_text_change_command" format="reference"/>
+    <!--    长按事件-->
+    <attr name="ui_on_long_click_command" format="reference"/>
+    <!--    触摸事件-->
+    <attr name="ui_on_touch_event_command" format="reference"/>
+    <!--    editText焦点变化事件-->
+    <attr name="ui_on_focus_change_command" format="reference"/>
+    <!--    checkbox状态变化事件-->
+    <attr name="ui_on_check_change_command" format="reference"/>
+
+    <!--    图片加载url-->
+    <attr name="ui_image_url" format="string" />
+    <!--    图片加载圆角,单位dp-->
+    <attr name="ui_image_corner" format="integer" />
+    <!--    图片加载模式,
+    com.basestonedata.lib.ui.binding.Constants
+    public static final int IMAGE_LOAD_MODE_CENTER_CROP = 1;
+    public static final int IMAGE_LOAD_MODE_FIT_CENTER = 2;
+    public static final int IMAGE_LOAD_MODE_NORMAL = 3;-->
+    <attr name="ui_image_load_mode" format="integer"/>
+</resources>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <!--这里的任何高度变动，可能会影响到首页刷新背景区域高度，需要一并改动-->
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottie_view"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center" />
+
+</FrameLayout>

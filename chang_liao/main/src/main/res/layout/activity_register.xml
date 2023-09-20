@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_account"
+            android:textSize="18sp"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"
+            android:maxLines="1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="70dp" />
+
+        <LinearLayout
+            android:id="@+id/llt_account"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/sel_edit_text_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_tip"
+            android:layout_marginTop="70dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp">
+
+            <TextView
+                android:id="@+id/tv_country_code"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center_vertical|right"
+                android:paddingEnd="5dp"
+                android:minWidth="50dp"
+                android:text="+86"
+                android:textColor="@color/text_black"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:id="@+id/img_down"
+                android:layout_width="12dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:adjustViewBounds="true"
+                android:src="@mipmap/icon_login_down" />
+
+            <EditText
+                android:id="@+id/edt_account"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_phone"
+                android:textColorHint="@color/text_grey"
+                android:textSize="16sp"
+                android:textColor="@color/text_grey"
+                android:inputType="phone"
+                android:maxLines="1"
+                android:layout_marginStart="24dp"
+                android:background="@null"
+                android:layout_marginEnd="10dp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llt_code"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/sel_edit_text_bg"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llt_account"
+            android:layout_marginTop="15dp"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/edt_code"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="@string/input_verification"
+                android:textColorHint="@color/text_grey"
+                android:textSize="16sp"
+                android:textColor="@color/text_grey"
+                android:maxLines="1"
+                android:layout_marginStart="24dp"
+                android:background="@null"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_get_code"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:text="@string/get_verification_code"
+                android:textSize="14sp"
+                android:textColor="@color/primary_color"
+                android:gravity="center"
+                android:background="@drawable/shape_primary_stroke_btn"
+                android:layout_marginEnd="5dp"
+                android:visibility="visible" />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edt_pwd"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:hint="@string/input_pwd"
+            android:textColorHint="@color/text_grey"
+            android:textSize="16sp"
+            android:textColor="@color/text_grey"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:background="@drawable/sel_edit_text_bg"
+            android:maxLines="1"
+            android:inputType="textPassword"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/llt_code"
+            android:layout_marginStart="25dp"
+            android:layout_marginEnd="25dp"
+            android:layout_marginTop="15dp" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            android:layout_width="0dp"
+            style="@style/primary_btn_style"
+            android:text="@string/register"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/edt_pwd"
+            android:layout_marginTop="72dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,61 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url "https://jitpack.io" }
+        maven { url "https://github.com/QuickBlox/quickblox-android-sdk-releases/raw/master/"}
+        maven { url 'https://dl.bintray.com/cjt/maven'}
+        maven { url 'https://maven.aliyun.com/repository/public'}
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter'}
+        // 融云推送
+//        maven {
+//            allowInsecureProtocol = true
+//            url  "http://maven.rongcloud.cn/repository/maven-releases/"
+//        }
+
+        // hms， 若不集成华为厂商通道，可直接跳过
+//        maven { url 'https://developer.huawei.com/repo/' }
+        // fcm， 若不集成 FCM 通道，可直接跳过
+        maven { url "https://maven.google.com" }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        maven { url "https://github.com/QuickBlox/quickblox-android-sdk-releases/raw/master/"}
+        maven { url 'https://dl.bintray.com/cjt/maven'}
+        maven { url 'https://maven.aliyun.com/repository/public'}
+        maven { url 'https://maven.aliyun.com/repository/google' }
+        maven { url 'https://maven.aliyun.com/repository/jcenter'}
+//        maven { url "https://mvn.getui.com/nexus/content/repositories/releases/"}
+//        maven { url 'https://repo.huaweicloud.com/repository/maven' }
+        maven {
+            allowInsecureProtocol = true
+            url  "http://maven.rongcloud.cn/repository/maven-releases/"}
+//        maven {
+//            allowInsecureProtocol = true
+//            url 'http://developer.huawei.com/repo/'
+//        }
+
+    }
+
+}
+rootProject.name = "ChangLiao"
+includeBuild('./../changliao_versionController/VersionController')
+include ':app'
+//include ':base'
+//project(":base").projectDir = new File("./../base")
+
+include ':base',':baseui',':basenetwork'
+include ':main'
+include ':common'
+include ':imkit'//, ':customcamera'
+//include ':weiXinRecorded'
+//project(":weiXinRecorded").projectDir = new File("./../../../github/WeiXinRecordedDemo/weiXinRecorded")
+//include ':camera'
+//project(":camera").projectDir = new File("./../../../github/CameraView/camera")

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="permission_recording">录音</string>
+    <string name="permission_storage">读写手机存储</string>
+    <string name="permission_camera">相机</string>
+    <string name="permission_location">定位</string>
+
+</resources>

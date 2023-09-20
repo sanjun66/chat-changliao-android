@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.legend.common.widget.SettingItemView
+            android:id="@+id/siv_verify"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ui_white"
+            app:content_text="@string/setting_add_friend_verify"
+            app:left_icon_visibility="8"
+            app:arrow_visibility="8"
+            app:switch_btn_visibility="0" />
+
+        <View style="@style/line2" />
+
+        <com.legend.common.widget.SettingItemView
+            android:id="@+id/siv_mute"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ui_white"
+            app:content_text="@string/setting_mute_all"
+            app:left_icon_visibility="8"
+            app:arrow_visibility="8"
+            app:switch_btn_visibility="0" />
+
+        <View style="@style/line2" />
+
+        <com.legend.common.widget.SettingItemView
+            android:id="@+id/siv_black_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ui_white"
+            app:content_text="@string/setting_black_list"
+            app:left_icon_visibility="8" />
+
+        <View style="@style/line2" />
+
+        <com.legend.common.widget.SettingItemView
+            android:id="@+id/siv_current_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ui_white"
+            app:content_text="@string/setting_cur_version"
+            app:left_icon_visibility="8"
+            app:arrow_visibility="8"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

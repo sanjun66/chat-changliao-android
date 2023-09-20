@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ui_tool_fix_ellipsize">\u200b</string>
+    <string name="ui_permission_denied">权限开启失败</string>
+    <string name="ui_tips">提示</string>
+    <string name="ui_permission_deined_tip">获取“%s”权限失败，建议开启该权限。拒绝后部分功能将无法正常使用</string>
+    <string name="ui_cancel">取消</string>
+    <string name="ui_to_open">去开启</string>
+    <string name="loading">加载中</string>
+
+</resources>

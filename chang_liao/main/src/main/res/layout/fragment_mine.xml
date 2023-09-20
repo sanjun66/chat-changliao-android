@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/comm_page_bg"
+        android:scrollbars="none">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <androidx.constraintlayout.utils.widget.ImageFilterView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/mine_top_bg"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:gravity="center_horizontal">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:id="@+id/tv_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/tab_self_center"
+                        android:layout_marginTop="46dp"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="16sp"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center_horizontal"/>
+
+                    <ImageView
+                        android:id="@+id/img_qr_code"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@mipmap/qr_code"
+                        android:layout_gravity="bottom|end"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginEnd="15dp"/>
+
+                </FrameLayout>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@mipmap/ic_user_avatar"
+                    app:riv_oval="true"
+                    app:riv_border_width="2dp"
+                    app:riv_border_color="@color/ui_white"
+                    android:scaleType="centerCrop"
+                    android:layout_marginTop="30dp"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    tools:text="NameName"
+                    android:textSize="18sp"
+                    android:textColor="@color/text_black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/tv_account"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:text="ID:198765777"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_grey"
+                    android:layout_marginTop="8dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginTop="50dp">
+
+                    <LinearLayout
+                        android:id="@+id/llt_edt_user"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/shape_5_white"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@mipmap/setting_edit"
+                            android:layout_marginStart="19dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/setting_edit"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_black"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="15dp"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+                        
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="9dp"
+                            android:src="@mipmap/setting_arrow"
+                            android:layout_marginEnd="19dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt_pwd"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/shape_5_white"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@mipmap/setting_pwd"
+                            android:layout_marginStart="19dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/setting_pwd"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_black"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="15dp"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="9dp"
+                            android:src="@mipmap/setting_arrow"
+                            android:layout_marginEnd="19dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt_wallet"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/shape_5_white"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@mipmap/ic_wallet"
+                            android:layout_marginStart="19dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/setting_wallet"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_black"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="15dp"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="9dp"
+                            android:src="@mipmap/setting_arrow"
+                            android:layout_marginEnd="19dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt_collect"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/shape_5_white"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="10dp"
+                        android:visibility="gone"
+                        tools:visibility="visible">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@mipmap/ic_collect"
+                            android:layout_marginStart="19dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/setting_collect"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_black"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="15dp"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="9dp"
+                            android:src="@mipmap/setting_arrow"
+                            android:layout_marginEnd="19dp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/llt_setting"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/shape_5_white"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:src="@mipmap/setting_setting"
+                            android:layout_marginStart="19dp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/setting_setting"
+                            android:textSize="13sp"
+                            android:textColor="@color/text_black"
+                            android:textStyle="bold"
+                            android:layout_marginLeft="15dp"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"/>
+
+                        <ImageView
+                            android:layout_width="6dp"
+                            android:layout_height="9dp"
+                            android:src="@mipmap/setting_arrow"
+                            android:layout_marginEnd="19dp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_exit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/setting_logout"
+                        android:textColor="@color/primary_color"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="38dp"
+                        android:layout_marginBottom="38dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </FrameLayout>
+    </ScrollView>
+
+</layout>

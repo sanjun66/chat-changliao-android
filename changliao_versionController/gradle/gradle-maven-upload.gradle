@@ -1,0 +1,32 @@
+apply plugin: 'maven'
+
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            repository(url: "http://maven.xiaoxiangyoupin.com/nexus/content/repositories/android") {
+                authentication(userName: "deployment", password: "123456")
+            }
+
+            pom.project {
+                groupId "com.basestonedata.instalment"
+                artifactId POM_ARTIFACT_ID
+                version POM_VERSION
+                packaging POM_PACKAGING
+                description POM_DESCRIPTION
+                licenses {
+                    license {
+                        name "The Apache Software License, Version 2.0"
+                        url "http://www.apache.org/licenses/LICENSE-2.0.txt"
+                    }
+                }
+                developers {
+                    developer {
+                        id "deployment"
+                        name "deployment"
+                    }
+                }
+
+            }
+        }
+    }
+}

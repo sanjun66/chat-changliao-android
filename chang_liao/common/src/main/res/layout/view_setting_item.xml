@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/llt_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+        <ImageView
+            android:id="@+id/img_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            tools:src="@mipmap/ic_profile_version"
+            android:layout_marginLeft="15dp"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:textColor="@color/text_black"
+            tools:text="Store"
+            android:layout_weight="1"
+            android:layout_marginRight="12dp"
+            android:layout_marginLeft="12dp"/>
+
+        <LinearLayout
+            android:id="@+id/llt_tips"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginRight="6dp">
+
+            <TextView
+                android:id="@+id/tv_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxWidth="200dp"
+                tools:text="V2.0.0"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:ellipsize="end" />
+
+            <ImageView
+                android:id="@+id/img_red_dot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="6dp"
+                android:src="@drawable/shape_round_dot_red"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_arrow"
+            style="@style/user_center_right_image_style" />
+
+        <com.legend.common.widget.switchbutton.SwitchButton
+            android:id="@+id/sb_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            app:kswAnimationDuration="300"
+            app:kswBackDrawable="@drawable/seal_switchbtn_check_selector"
+            app:kswBackMeasureRatio="1.5"
+            app:kswThumbMargin="1dp"
+            app:kswThumbDrawable="@drawable/seal_ic_switchbtn_thumb"
+            app:kswThumbRadius="10dp"
+            android:layout_marginRight="15dp" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view_line"
+        style="@style/line2"
+        tools:visibility="visible"
+        android:visibility="gone"/>
+    
+</LinearLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "960703045409",
+    "project_id": "sochat-5aae2",
+    "storage_bucket": "sochat-5aae2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960703045409:android:b45d4f2c5be9f32ca02860",
+        "android_client_info": {
+          "package_name": "com.kaiyiweitong.weilian"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960703045409-ilkaa5dcq11diou19fg8hi5tee165mom.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBdzcT9yg5a-FXhLuBRCvuSD95xWko0_B0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960703045409-ilkaa5dcq11diou19fg8hi5tee165mom.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

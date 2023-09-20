@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/ui_white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/view_space"/>
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/avatar"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@mipmap/ic_user_avatar"
+            app:riv_corner_radius="@dimen/avatar_radius"
+            app:riv_border_width="1dp"
+            app:riv_border_color="@color/ui_white"
+            android:scaleType="centerCrop"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/avatar"
+            app:layout_constraintTop_toTopOf="@id/avatar"
+            android:layout_marginStart="14dp"
+            tools:text="NameName"
+            android:textSize="18sp"
+            android:textColor="@color/text_black"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/img_sex"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintStart_toEndOf="@id/tv_name"
+            app:layout_constraintTop_toTopOf="@id/tv_name"
+            app:layout_constraintBottom_toBottomOf="@id/tv_name"/>
+
+        <TextView
+            android:id="@+id/tv_nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="nickname"
+            android:textSize="14sp"
+            android:textColor="@color/text_grey"
+            app:layout_constraintStart_toStartOf="@id/tv_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_name"/>
+
+        <TextView
+            android:id="@+id/tv_account"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            tools:text="account"
+            android:textSize="14sp"
+            android:textColor="@color/text_grey"
+            app:layout_constraintStart_toStartOf="@id/tv_nick_name"
+            app:layout_constraintTop_toBottomOf="@id/tv_nick_name"/>
+
+        <View android:id="@+id/view_space"
+            android:layout_width="0dp"
+            android:layout_height="1dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_account"
+            android:layout_marginTop="30dp"/>
+
+        <View android:id="@+id/line_top"
+            style="@style/line2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view_space"
+            android:visibility="gone"
+            tools:visibility="visible"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/line_top">
+
+            <com.legend.common.widget.SettingItemView
+                android:id="@+id/siv_note_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ui_white"
+                app:content_text="@string/set_note_name"
+                app:left_icon_visibility="8"
+                app:line_visibility="0"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <com.legend.common.widget.SettingItemView
+                android:id="@+id/siv_disturb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ui_white"
+                app:content_text="@string/member_undisturb"
+                tools:visibility="visible"
+                android:visibility="gone"
+                app:left_icon_visibility="8"
+                app:arrow_visibility="8"
+                app:switch_btn_visibility="0"
+                app:line_visibility="0"/>
+
+            <com.legend.common.widget.SettingItemView
+                android:id="@+id/siv_mute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ui_white"
+                app:content_text="@string/member_mute"
+                tools:visibility="visible"
+                android:visibility="gone"
+                app:left_icon_visibility="8"
+                app:arrow_visibility="8"
+                app:switch_btn_visibility="0"
+                app:line_visibility="0"/>
+
+            <com.legend.common.widget.SettingItemView
+                android:id="@+id/siv_black_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ui_white"
+                app:content_text="@string/add_black"
+                app:left_icon_visibility="8"
+                app:arrow_visibility="8"
+                app:switch_btn_visibility="0"
+                app:line_visibility="8"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+            <TextView
+                android:id="@+id/tv_send_msg"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/ui_white"
+                android:layout_marginTop="10dp"
+                android:text="@string/send_message"
+                android:textColor="@color/primary_color"
+                android:textSize="16sp"
+                android:gravity="center"
+                android:visibility="gone"
+                tools:visibility="visible"/>
+
+
+            <TextView
+                android:id="@+id/tv_op_friend"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/ui_white"
+                tools:text="添加好友"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/primary_color"
+                android:textSize="16sp"
+                android:gravity="center" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

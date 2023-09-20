@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="10dp">
+
+        <FrameLayout
+            android:id="@+id/flt_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <ImageView
+                android:id="@+id/img_pic"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="centerCrop" />
+            
+            <ImageView
+                android:id="@+id/img_video_sign"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@mipmap/ic_video_start"
+                android:layout_gravity="center"
+                android:visibility="gone"/>
+        </FrameLayout>
+        
+
+        <com.legend.imkit.widget.EllipsizeTextView
+            android:id="@+id/tv_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:maxLines="1"
+            android:textColor="@color/text_black"
+            android:textSize="14sp"
+            tools:text="这是个什么文件啊,谁能告诉我一下呢"
+            app:RCEllipsizeIndex="8"
+            app:layout_constraintTop_toTopOf="@id/flt_layout"
+            app:layout_constraintStart_toEndOf="@id/flt_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginStart="10dp" />
+
+        <TextView
+            android:id="@+id/tv_file_size"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            tools:text="11M"
+            android:textSize="12sp"
+            android:textColor="@color/text_grey"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tv_name"
+            app:layout_constraintBottom_toBottomOf="@id/flt_layout" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

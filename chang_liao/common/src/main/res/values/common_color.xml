@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_color">@color/ui_primary</color>
+    <color name="comm_page_bg">#F4FBFE</color>
+    <color name="text_black">#001038</color>
+    <color name="text_grey">#868A9A</color>
+    <color name="text_hint_color">#B1BEC9</color>
+    <color name="text_msg_time">#739BAC</color>
+
+    <color name="black_5_trans">#0D000000</color>
+    <color name="white_5_trans">#0Dffffff</color>
+    <color name="black">#000000</color>
+    <color name="black_tran30">#4D000000</color>
+    <color name="tab_unselect_color">@color/ui_grey_868A9A</color>
+    <color name="tab_selected_color">@color/ui_primary</color>
+</resources>

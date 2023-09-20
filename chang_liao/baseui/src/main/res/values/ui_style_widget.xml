@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="UI.BaseDialog" parent="Theme.AppCompat.Dialog">
+        <item name="android:buttonStyle">@style/UI.Button.Compat</item>
+    </style>
+
+    <style name="UI.Dialog" parent="UI.BaseDialog">
+        <item name="android:backgroundDimAmount">0.5</item>
+        <item name="android:windowBackground">@color/ui_config_color_transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item><!-- 在中间弹框、背后有遮罩的效果 -->
+    </style>
+
+    <style name="UI.Dialog.Title">
+        <item name="android:textColor">@color/ui_dialog_title_text_color_black</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <style name="UI.Dialog.MessageContent">
+        <item name="android:textColor">@color/ui_dialog_message_text_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingLeft">20dp</item>
+        <item name="android:paddingRight">20dp</item>
+        <item name="android:paddingBottom">25dp</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:lineSpacingExtra">3dp</item>
+        <item name="android:drawablePadding">8dp</item>
+        <item name="ui_paddingTopWhenNotTitle">27dp</item>
+    </style>
+
+    <style name="UI.Dialog.Action">
+        <item name="android:textColor">@color/ui_dialog_neutral_action_text_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:minWidth">64dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:background">@color/ui_dialog_action_bg_color</item>
+        <item name="ui_dialog_action_button_padding_horizontal">12dp</item>
+        <item name="ui_dialog_action_icon_space">6dp</item>
+        <item name="ui_dialog_positive_action_text_color">
+            @color/ui_dialog_positive_action_text_color
+        </item>
+        <item name="ui_dialog_negative_action_text_color">
+            @color/ui_dialog_negative_action_text_color
+        </item>
+    </style>
+
+    <style name="UI.Dialog.ActionContainer">
+        <item name="ui_dialog_action_container_justify_content">stretch</item>
+        <item name="ui_dialog_action_height">43dp</item>
+        <item name="ui_dialog_action_space">8dp</item>
+        <item name="ui_dialog_action_container_top_divider_thickness">0.5dp</item>
+        <item name="ui_dialog_action_divider_thickness">0.5dp</item>
+        <item name="ui_dialog_divider_color">@color/ui_dialog_action_divider_color</item>
+    </style>
+
+
+    <declare-styleable name="ui_Banner">
+        <attr name="ui_delay_time" format="integer" />
+        <attr name="ui_scroll_time" format="integer" />
+        <attr name="ui_is_auto_play" format="boolean" />
+        <attr name="ui_title_background" format="color|reference" />
+        <attr name="ui_title_textcolor" format="color" />
+        <attr name="ui_title_textsize" format="dimension" />
+        <attr name="ui_title_height" format="dimension" />
+        <attr name="ui_indicator_width" format="dimension" />
+        <attr name="ui_indicator_height" format="dimension" />
+        <attr name="ui_indicator_margin" format="dimension" />
+        <attr name="ui_indicator_padding" format="dimension" />
+        <attr name="ui_indicator_drawable_selected" format="reference" />
+        <attr name="ui_indicator_drawable_unselected" format="reference" />
+        <attr name="ui_banner_layout" format="reference" />
+        <attr name="ui_banner_default_image" format="reference" />
+        <attr name="ui_image_scale_type" format="enum">
+            <enum name="center" value="0" />
+            <enum name="center_crop" value="1" />
+            <enum name="center_inside" value="2" />
+            <enum name="fit_center" value="3" />
+            <enum name="fit_end" value="4" />
+            <enum name="fit_start" value="5" />
+            <enum name="fit_xy" value="6" />
+            <enum name="matrix" value="7" />
+        </attr>
+    </declare-styleable>
+
+    <style name="ui_BottomToTopAnim" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/ui_bottom_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/ui_bottom_anim_exit</item>
+    </style>
+
+
+    <declare-styleable name="ui_ToggleButton">
+        <attr name="borderWidth1" format="dimension" tools:ignore="ResourceName">
+        </attr>
+        <attr name="offBorderColor" format="reference|color" tools:ignore="ResourceName">
+        </attr>
+        <attr name="offColor" format="reference|color" tools:ignore="ResourceName">
+        </attr>
+        <attr name="onColor" format="reference|color" tools:ignore="ResourceName">
+        </attr>
+        <attr name="spotColor" format="reference|color" tools:ignore="ResourceName">
+        </attr>
+        <attr name="animate" format="reference|boolean" tools:ignore="ResourceName">
+        </attr>
+        <attr name="isDefaultOn" format="reference|boolean" tools:ignore="ResourceName">
+        </attr>
+    </declare-styleable>
+</resources>

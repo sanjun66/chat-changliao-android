@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/biv_pic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_marginStart="0dp"
+            app:riv_corner_radius="@dimen/avatar_radius"
+            />
+
+<!--        <com.legend.imkit.widget.BubbleImageView-->
+<!--            android:id="@+id/bivPic"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            app:angle="6dp"-->
+<!--            app:arrowHeight="8dp"-->
+<!--            app:arrowLocation="left"-->
+<!--            app:arrowPosition="15dp"-->
+<!--            app:arrowWidth="5dp" />-->
+
+
+        <ImageView
+            android:id="@+id/ivPlay"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/ic_video_start" />
+
+        <ProgressBar
+            android:id="@+id/compress_video_bar"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:indeterminateTint="@color/primary_color"
+            android:visibility="gone" />
+
+<!--        <com.legend.imkit.widget.CircleProgressView-->
+<!--            android:id="@+id/video_progress"-->
+<!--            android:layout_width="41dp"-->
+<!--            android:layout_height="41dp"-->
+<!--            android:layout_centerInParent="true" -->
+<!--            android:visibility="gone"/>-->
+
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:maxWidth="60dp"
+            android:maxHeight="30dp"
+            android:textSize="12sp"
+            android:layout_gravity="bottom|end"
+            android:textColor="@color/ui_white"
+            android:layout_marginEnd="2dp"
+            android:layout_marginBottom="4dp"/>
+
+    </FrameLayout>
+</layout>

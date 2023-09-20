@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:ignore="MissingDefaultResource">
+
+    <data>
+
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ui_white"/>
+
+            <View
+                android:id="@+id/view_space"
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:background="@color/ui_white"/>
+
+            <TextView
+                android:id="@+id/tv_show_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/show_more_group_member"
+                android:textColor="@color/text_grey"
+                android:textSize="14sp"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="20dp"
+                tools:visibility="visible"
+                android:visibility="gone"
+                android:background="@color/ui_white"/>
+
+            <View
+                android:id="@+id/view_space1"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:background="@color/grey_transparent_50"/>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+                <com.legend.common.widget.SettingItemView
+                    android:id="@+id/siv_group_avatar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/ui_white"
+                    app:content_text="@string/group_avatar"
+                    app:left_icon_visibility="8"
+                    app:line_visibility="0"/>
+
+                <com.makeramen.roundedimageview.RoundedImageView
+                    android:id="@+id/riv_avatar"
+                    android:layout_width="@dimen/avatar_size"
+                    android:layout_height="@dimen/avatar_size"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="30dp"
+                    app:riv_oval="true"
+                    app:riv_border_width="1dp"
+                    app:riv_border_color="@color/ui_white"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/ic_user_avatar" />
+            </FrameLayout>
+
+            <com.legend.common.widget.SettingItemView
+                android:id="@+id/siv_group_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ui_white"
+                app:content_text="@string/group_name"
+                app:left_icon_visibility="8"
+                app:line_visibility="0"/>
+
+            <FrameLayout
+                android:id="@+id/flt_group_qrcode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical">
+                <com.legend.common.widget.SettingItemView
+                    android:id="@+id/siv_group_qrcode"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/ui_white"
+                    app:content_text="@string/group_qr_code"
+                    app:left_icon_visibility="8"
+                    app:line_visibility="0"/>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="30dp"
+                    android:scaleType="centerCrop"
+                    android:src="@mipmap/qr_code"
+                    app:tint="@color/text_grey" />
+            </FrameLayout>
+
+            <com.legend.common.widget.SettingItemView
+                android:id="@+id/siv_group_manager"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ui_white"
+                app:content_text="@string/group_manager"
+                app:left_icon_visibility="8"
+                app:line_visibility="0"/>
+
+            <com.legend.common.widget.SettingItemView
+                android:id="@+id/siv_group_disturb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ui_white"
+                app:content_text="@string/member_undisturb"
+                app:left_icon_visibility="8"
+                app:arrow_visibility="8"
+                app:switch_btn_visibility="0"
+                app:line_visibility="0"/>
+
+            <com.legend.common.widget.SettingItemView
+                android:id="@+id/siv_group_call"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ui_white"
+                app:content_text="@string/group_call"
+                app:left_icon_visibility="8"
+                app:arrow_visibility="8"
+                app:switch_btn_visibility="0"
+                app:line_visibility="0"/>
+
+            <com.legend.common.widget.SettingItemView
+                android:id="@+id/siv_group_mute"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/ui_white"
+                app:content_text="@string/group_mute"
+                app:left_icon_visibility="8"
+                app:arrow_visibility="8"
+                app:switch_btn_visibility="0" />
+
+            <TextView
+                android:id="@+id/tv_mute_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/seal_mute_all_tips"
+                android:textSize="12sp"
+                android:textColor="@color/text_grey"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="20dp"/>
+
+           <TextView
+               android:id="@+id/tv_delete"
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:background="@color/ui_white"
+               android:layout_marginTop="40dp"
+               tools:text="删除并退出"
+               android:textColor="@color/ui_red_FE2121"
+               android:textSize="14sp"
+               android:gravity="center" />
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

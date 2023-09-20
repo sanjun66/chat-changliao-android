@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+<!--    fill_horizontal 充满横屏-->
+<!--    fill_vertical 充满竖屏-->
+
+    <item
+        android:drawable="@color/primary_color"
+        android:gravity="fill" />
+
+
+    <item
+        android:gravity="center"
+        android:left="100dp"
+        android:right="100dp">
+
+        <bitmap
+            android:gravity="center"
+            android:src="@mipmap/splash_logo"
+            />
+
+    </item>
+
+<!--    <item-->
+<!--        android:bottom="50dp">-->
+
+<!--        <bitmap-->
+<!--            android:gravity="bottom|center_horizontal"-->
+<!--            android:src="@mipmap/splash_tips"/>-->
+
+<!--    </item>-->
+
+
+</layer-list>

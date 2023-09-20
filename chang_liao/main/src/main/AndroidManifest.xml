@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+
+    <application>
+        <activity android:name=".login.LoginActivity" />
+        <activity android:name=".login.LoginRealActivity" />
+        <activity android:name=".login.ResetPwdActivity" />
+        <activity android:name=".login.RegisterActivity" />
+        <activity android:name=".login.ChooseCountryCodeActivity" />
+        <activity android:name=".home.HomeActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.VIEW" />-->
+<!--                <category android:name="android.intent.category.DEFAULT" />-->
+<!--                <data-->
+<!--                    android:host="com.legend.sochat"-->
+<!--                    android:pathPrefix="/conversationlist"-->
+<!--                    android:scheme="rong" />-->
+<!--            </intent-filter>-->
+        </activity>
+        <activity android:name=".friends.SearchFriendActivity" />
+        <activity android:name=".friends.ApplyListActivity">
+            <intent-filter>
+                <action android:name="cn.jiguang.chataction"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".group.SelectMemberActivity" />
+        <activity android:name=".activity.UserInfoActivity"/>
+        <activity android:name=".activity.ChangeUserInfoActivity"/>
+        <activity android:name=".group.GroupChatInfoActivity"/>
+        <activity android:name=".group.GroupListActivity"/>
+        <activity android:name=".group.GroupMemberActivity"/>
+        <activity android:name=".activity.UserActivity"/>
+        <activity android:name=".activity.SettingActivity"/>
+        <activity android:name=".activity.FriendBlackListActivity"/>
+        <activity android:name=".activity.QrCodeDisplayActivity"/>
+        <activity android:name="com.legend.common.activity.QrScanActivity"/>
+        <activity android:name=".group.GroupManagerActivity"/>
+        <activity android:name=".activity.QrGroupIdentifyActivity"/>
+        <activity android:name=".pick.PickChatActivity"/>
+        <activity android:name=".wallet.MyWalletActivity"/>
+        <activity android:name=".wallet.UPayActivity"/>
+        <activity android:name=".wallet.WithDrawActivity"/>
+        <activity android:name=".wallet.WalletDetailActivity"/>
+    </application>
+</manifest>

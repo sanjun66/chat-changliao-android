@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+    </data>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_concat_person"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/pick_concat_person"
+            android:textSize="@dimen/text_normal"
+            android:textColor="@color/text_black"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/item_margin_side" />
+
+        <View
+            style="@style/line2"
+            android:layout_marginStart="@dimen/item_margin_side" />
+
+        <TextView
+            android:id="@+id/tv_group"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:text="@string/pick_group"
+            android:textSize="@dimen/text_normal"
+            android:textColor="@color/text_black"
+            android:gravity="center_vertical"
+            android:layout_marginStart="@dimen/item_margin_side" />
+
+        <View
+            style="@style/line2"
+            android:layout_marginStart="@dimen/item_margin_side"
+            android:visibility="gone"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/latest_chat"
+            android:textColor="@color/text_grey"
+            android:textSize="14sp"
+            android:layout_marginStart="@dimen/item_margin_side"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</layout>

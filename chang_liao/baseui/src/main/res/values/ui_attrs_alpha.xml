@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="UIAlphaTextView">
+        <attr name="ui_alpha_pressed" />
+        <attr name="ui_alpha_disabled" />
+    </declare-styleable>
+</resources>

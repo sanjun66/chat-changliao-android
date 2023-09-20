@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_selected="true" android:drawable="@drawable/shape_primary_solid_btn"/>
+    <item android:state_enabled="true" android:drawable="@drawable/shape_primary_solid_btn"/>
+
+    <item android:drawable="@drawable/shape_unavailable_solid_btn"/>
+</selector>

@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/fragmentIncomeCall"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_black">
+
+    <LinearLayout
+        android:id="@+id/layout_info_about_call"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="80dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingLeft="64dp"
+        android:paddingRight="64dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/image_caller_avatar"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:src="@mipmap/ic_user_avatar"
+            app:riv_oval="true"/>
+
+        <TextView
+            android:id="@+id/text_caller_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:textColor="@color/white"
+            android:textSize="22sp"
+            android:layout_marginTop="20dp"
+            tools:text="Egor Pavlov" />
+
+
+        <TextView
+            android:id="@+id/call_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="@string/call_invite_you_multitude"
+            android:textColor="#6e6e6e"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/text_also_on_call"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:text="@string/call_also"
+            android:textColor="#6e6e6e"
+            android:textSize="16sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/text_other_users"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textColor="#e6e6e6"
+            android:textSize="16sp"
+            tools:text="User 1, User 2, User 3"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/img_small_window_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/small_window_switch"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/call_invite_you_call"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:layout_above="@id/rlt_action_button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
+
+    <RelativeLayout
+        android:id="@+id/rlt_action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="60dp"
+        android:gravity="center">
+
+        <ImageButton
+            android:id="@+id/image_button_reject_call"
+            style="@style/EndCallImageButton" />
+
+        <ImageButton
+            android:id="@+id/image_button_accept_call"
+            style="@style/TakeCallImageButton"
+            android:layout_marginStart="88dp"
+            android:layout_toEndOf="@id/image_button_reject_call"
+            android:src="@drawable/ic_call"
+            tools:ignore="RtlCompat" />
+    </RelativeLayout>
+</RelativeLayout>

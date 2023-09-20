@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ui_backgroundColor" format="color"/>
+    <attr name="ui_borderColor" format="color"/>
+    <attr name="ui_borderWidth" format="dimension"/>
+    <attr name="ui_radius" format="dimension"/>
+    <attr name="ui_linkColor" format="color"/>
+
+    <declare-styleable name="UILayout">
+        <attr name="android:maxWidth"/>
+        <attr name="android:maxHeight"/>
+        <attr name="android:minWidth"/>
+        <attr name="android:minHeight"/>
+        <attr name="ui_bottomDividerHeight" format="dimension"/>
+        <attr name="ui_bottomDividerColor" format="color|reference"/>
+        <attr name="ui_bottomDividerInsetLeft" format="dimension"/>
+        <attr name="ui_bottomDividerInsetRight" format="dimension"/>
+        <attr name="ui_topDividerHeight" format="dimension"/>
+        <attr name="ui_topDividerColor" format="color|reference"/>
+        <attr name="ui_topDividerInsetLeft" format="dimension"/>
+        <attr name="ui_topDividerInsetRight" format="dimension"/>
+        <attr name="ui_leftDividerWidth" format="dimension"/>
+        <attr name="ui_leftDividerColor" format="color|reference"/>
+        <attr name="ui_leftDividerInsetTop" format="dimension"/>
+        <attr name="ui_leftDividerInsetBottom" format="dimension"/>
+        <attr name="ui_rightDividerWidth" format="dimension"/>
+        <attr name="ui_rightDividerColor" format="color|reference"/>
+        <attr name="ui_rightDividerInsetTop" format="dimension"/>
+        <attr name="ui_rightDividerInsetBottom" format="dimension"/>
+        <attr name="ui_radius"/>
+        <attr name="ui_borderColor"/>
+        <attr name="ui_borderWidth"/>
+        <attr name="ui_outerNormalColor" format="color|reference"/>
+        <attr name="ui_hideRadiusSide" format="enum">
+            <enum name="none" value="0"/>
+            <enum name="top" value="1"/>
+            <enum name="right" value="2"/>
+            <enum name="bottom" value="3"/>
+            <enum name="left" value="4"/>
+        </attr>
+        <attr name="ui_showBorderOnlyBeforeL" format="boolean"/>
+        <attr name="ui_shadowElevation" format="dimension"/>
+        <attr name="ui_useThemeGeneralShadowElevation" format="boolean"/>
+        <attr name="ui_shadowAlpha" format="float"/>
+        <attr name="ui_outlineInsetTop" format="dimension"/>
+        <attr name="ui_outlineInsetLeft" format="dimension"/>
+        <attr name="ui_outlineInsetRight" format="dimension"/>
+        <attr name="ui_outlineInsetBottom" format="dimension"/>
+        <attr name="ui_outlineExcludePadding" format="boolean"/>
+    </declare-styleable>
+
+
+    <declare-styleable name="ui_RoundAttrs">
+        <!--圆形-->
+        <attr name="ui_round_as_circle" format="boolean" />
+        <!--全部圆角半径-->
+        <attr name="ui_round_corner"  format="integer|dimension" />
+        <!--针对各个角的半径-->
+        <attr name="ui_round_corner_top_left" format="integer|dimension"/>
+        <attr name="ui_round_corner_top_right" format="integer|dimension"/>
+        <attr name="ui_round_corner_bottom_left" format="integer|dimension"/>
+        <attr name="ui_round_corner_bottom_right" format="integer|dimension"/>
+        <!--描边颜色／半径-->
+        <attr name="ui_stroke_color" format="color|reference" />
+        <attr name="ui_stroke_width" format="integer|dimension"/>
+        <!-- 是否剪裁 RoundLayout 的背景 -->
+        <attr name="ui_clip_background" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="ui_RoundLinearLayout">
+        <attr name="ui_ll_r_radius" format="dimension|reference" />
+        <attr name="ui_ll_top_r_radius" format="dimension|reference" />
+        <attr name="ui_ll_bottom_r_radius" format="dimension|reference" />
+    </declare-styleable>
+    <declare-styleable name="ui_RoundRelativeLayout">
+        <attr name="ui_rl_r_radius" format="dimension|reference" />
+        <attr name="ui_rl_top_r_radius" format="dimension|reference" />
+        <attr name="ui_rl_bottom_r_radius" format="dimension|reference" />
+    </declare-styleable>
+    <!-- UILoadingView -->
+    <declare-styleable name="UILoadingView">
+        <attr name="ui_loading_view_size" format="dimension"/>
+        <attr name="android:color"/>
+    </declare-styleable>
+
+    <!-- 密码 验证码输入框-->
+    <declare-styleable name="UISplitEditTextView">
+        <!--边框大小-->
+        <attr name="ui_borderWidth"/>
+        <!--边框颜色-->
+        <attr name="ui_borderColor"/>
+        <!--圆角大小-->
+        <attr name="ui_corner_size" format="dimension" />
+        <!--分割线大小-->
+        <attr name="ui_divisionLineSize" format="dimension" />
+        <!--分割线颜色-->
+        <attr name="ui_divisionLineColor" format="reference|color" />
+        <!--内容显示为圆的半径-->
+        <attr name="ui_circleRadius" format="dimension" />
+        <!--输入内容数量-->
+        <attr name="ui_contentNumber" format="integer" />
+        <!--输入内容显示样式-->
+        <attr name="ui_contentShowMode" format="enum">
+            <!--显示成密码圆-->
+            <enum name="password" value="1" />
+            <!--显示成文本-->
+            <enum name="text" value="2" />
+        </attr>
+        <!--单个输入框和下划线样式下,每个输入框之间的间距-->
+        <attr name="ui_spaceSize" format="dimension" />
+        <!--输入框样式-->
+        <attr name="ui_inputBoxStyle" format="enum">
+            <!--输入框整体相连的样式-->
+            <enum name="connectBox" value="1" />
+            <!--单个输入框样式-->
+            <enum name="singleBox" value="2" />
+            <!--下划线样式-->
+            <enum name="underline" value="3" />
+        </attr>
+        <!--密码字体颜色-->
+        <attr name="android:textColor" />
+        <!--密码字体大小-->
+        <attr name="android:textSize" />
+        <!--输入框是否是正方形-->
+        <attr name="ui_inputBoxSquare" format="boolean" />
+        <!--光标宽度-->
+        <attr name="ui_cursorWidth" format="dimension" />
+        <!--光标高度-->
+        <attr name="ui_cursorHeight" format="dimension" />
+        <!--光标颜色-->
+        <attr name="ui_cursorColor" format="color|reference" />
+        <!--光标闪烁时长-->
+        <attr name="ui_cursorDuration" format="integer" />
+        <!--下划线输入框样式下,下划线正常的颜色-->
+        <attr name="ui_underlineNormalColor" format="reference|color" />
+        <!--下划线输入框样式下,下划线获取焦点时颜色-->
+        <attr name="ui_underlineFocusColor" format="reference|color" />
+    </declare-styleable>
+
+    <declare-styleable name="ui_FadingEdgeRecyclerView">
+        <attr name="ui_fadingEdge" format="integer">
+            <flag name="top" value="1"/>
+            <flag name="bottom" value="2"/>
+            <flag name="left" value="4"/>
+            <flag name="right" value="8"/>
+        </attr>
+
+        <attr name="ui_fadingEdgeLength" format="dimension"/>
+        <attr name="ui_fadingEdgeLeftLength" format="dimension"/>
+        <attr name="ui_fadingEdgeTopLength" format="dimension"/>
+        <attr name="ui_fadingEdgeBottomLength" format="dimension"/>
+        <attr name="ui_fadingEdgeRightLength" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="ui_ExpandableTextView">
+        <attr name="ui_MaxLinesOnShrink" format="reference|integer" />
+        <attr name="ui_EllipsisHint" format="reference|string" />
+        <attr name="ui_ToExpandHint" format="reference|string" />
+        <attr name="ui_ToShrinkHint" format="reference|string" />
+        <attr name="ui_ToShrinkHintShow" format="reference|boolean" />
+        <attr name="ui_ToExpandHintColor" format="reference|color" />
+        <attr name="ui_ToShrinkHintColor" format="reference|color" />
+    </declare-styleable>
+</resources>

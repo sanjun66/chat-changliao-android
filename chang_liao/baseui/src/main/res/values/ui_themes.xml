@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="UI.ButtonBase.Compat" parent="@style/Widget.AppCompat.Button">
+        <!-- 取消 Button 字符默认大写的功能（会导致 Spannable 失效），默认值只影响 5.0 以上版本，但使用Compat包后，4.x 版本也会受到影响 -->
+        <!-- http://stackoverflow.com/questions/29007746/button-settext-with-spannable-dosent-work-for-android-5-0-lollipop -->
+        <item name="android:textAllCaps">false</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="UI.Button.Compat" parent="UI.ButtonBase.Compat" />
+
+    <style name="UITheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="ui_dialog_title_style">@style/UI.Dialog.Title</item>
+        <item name="ui_dialog_message_content_style">@style/UI.Dialog.MessageContent</item>
+        <item name="ui_dialog_action_container_style">@style/UI.Dialog.ActionContainer</item>
+        <item name="ui_dialog_action_style">@style/UI.Dialog.Action</item>
+
+        <item name="ui_alpha_pressed">0.2</item>
+        <item name="ui_alpha_disabled">0.2</item>
+
+        <!-- 去除view弹性阴影 -->
+        <item name="android:overScrollMode">never</item>
+    </style>
+</resources>

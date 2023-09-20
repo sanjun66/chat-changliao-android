@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="ui_dialog_title_layout_id" type="id" />
+    <item name="ui_dialog_operator_layout_id" type="id" />
+    <item name="ui_dialog_content_layout_id" type="id" />
+
+    <item name="ui_banner_container" type="id" />
+    <item name="ui_banner_viewPager" type="id" />
+    <item name="ui_banner_numIndicator" type="id" />
+    <item name="ui_banner_titleView" type="id" />
+    <item name="ui_banner_title" type="id" />
+    <item name="ui_banner_numIndicatorInside" type="id" />
+    <item name="ui_banner_indicatorInside" type="id" />
+    <item name="ui_banner_DefaultImage" type="id" />
+
+    <item name="ui_fake_status_bar_view" type="id" />
+    <item name="ui_translucent_view" type="id" />
+
+
+    <!--    小红点控件-->
+    <item name="ui_badge_view" type="id" />
+
+    <!--    权限预申请-->
+    <item name="ui_permission_icon" type="id" />
+    <item name="ui_permission_name" type="id" />
+    <item name="ui_permission_description" type="id" />
+
+    <!--    列表条目右侧图标-->
+    <item name="ui_simple_list_item_view_right_icon" type="id" />
+
+    <!--    列表条目,开关-->
+    <item name="ui_simple_toggle_title" type="id" />
+    <item name="ui_simple_toggle_description" type="id" />
+    <item name="ui_simple_toggle" type="id" />
+
+</resources>

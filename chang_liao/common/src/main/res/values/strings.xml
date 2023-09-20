@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SoChat</string>
+    <string name="choose_flie">选择文件</string>
+    <string name="please_check_network">请检查下您的网络</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="dialog_tip">提示</string>
+    <string name="edit_profile_right_date">请选择正确的日期</string>
+    <string name="update_immediately">立即更新</string>
+    <string name="find_new_version">发现新版本</string>
+    <string name="update_error">更新失败请重新更新</string>
+    <string name="update_again">重新更新</string>
+
+    <string name="chat_send">发送</string>
+    <string name="chat_choose">选择</string>
+    <string name="success">成功</string>
+    <string name="fail">失败</string>
+    <string name="send_success">发送成功</string>
+    <string name="seal_main_title_scan">扫一扫</string>
+    <string name="extra_photo_album">相册</string>
+
+    <string name="msg_sub_image">[图片]</string>
+    <string name="msg_sub_audio">[语音]</string>
+    <string name="msg_sub_video">[视频]</string>
+    <string name="msg_sub_file">[文件]</string>
+    <string name="msg_sub_call_video">[视频消息]</string>
+    <string name="msg_sub_call_audio">[语音消息]</string>
+    <string name="msg_sub_history">[聊天记录]</string>
+    <string name="msg_sub_secret_msg">[密聊消息]</string>
+
+    <string name="you">你</string>
+    <string name="group_invite_msg">%1$s 邀请了 %2$s 进入群聊</string>
+    <string name="group_exit_msg">%s 已退出群聊</string>
+    <string name="group_kit_out_msg">%1$s 已被 %2$s 踢出群聊</string>
+    <string name="group_dissolve_msg">%s 已解散群聊</string>
+    <string name="revoke_msg_you">你撤回了一条消息</string>
+    <string name="revoke_msg_other">对方撤回了一条消息</string>
+    <string name="revoke_msg_who">"%s" 撤回了一条消息</string>
+
+    <string name="call_cancel">已取消</string>
+    <string name="call_opponent_cancel">对方已取消</string>
+    <string name="call_refuse">已拒绝</string>
+    <string name="call_opponent_refuse">对方已拒绝</string>
+    <string name="call_opponent_no_answer">对方无应答</string>
+    <string name="call_not_accept">未接听</string>
+    <string name="call_continue_time">通话时长 %s</string>
+    <string name="call_opponent_busy">对方忙碌</string>
+    <string name="call_opponent_busy_refuse">忙碌未接通</string>
+    <string name="call_exception">通话异常</string>
+    <string name="call_start_audio_call">%s发起了语音通话</string>
+    <string name="call_start_video_call">%s发起了视频通话</string>
+    <string name="call_finished">通话已结束</string>
+
+    <string name="new_friend_msg_tip">你们已经成为好友了~</string>
+    <string name="not_join_group">您未加入此群聊</string>
+
+    <string name="save_to_phone">保存到手机</string>
+    <string name="identify_qr_code">识别二维码</string>
+    <string name="identify_qr_code_error">未识别</string>
+    <string name="add_group_tips">是否加入群聊  %s</string>
+
+    <string name="pick_one_chat">选择一个聊天</string>
+    <string name="pick_concat_person">选择联系人</string>
+    <string name="pick_group">选择群聊</string>
+    <string name="latest_chat">最近聊天</string>
+    <string name="forward_success">转发成功</string>
+
+    <string name="open_style">打开方式</string>
+    <string name="rc_ac_file_download_preview">文件预览</string>
+    <string name="rc_ac_file_preview_begin_download">开始下载</string>
+    <string name="rc_ac_file_download_progress_pause">已取消</string>
+    <string name="rc_ac_file_preview_download_resume">继续下载</string>
+    <string name="rc_notice_network_unavailable">当前网络不可用，请检查你的网络设置</string>
+    <string name="rc_ac_file_download_progress_tv">下载中...</string>
+    <string name="rc_ac_file_download_open_file_btn">用其他应用打开</string>
+    <string name="rc_ac_file_preview_downloaded">已下载</string>
+    <string name="rc_ac_file_preview_download_error">下载失败</string>
+    <string name="rc_ac_file_preview_download_cancel">已取消下载</string>
+    <string name="rc_ac_file_url_error">文件地址异常，无法下载!</string>
+    <string name="rc_ac_file_preview_can_not_open_file">无法打开文件</string>
+    <string name="rc_ac_file_download_request_permission">您需要在设置里打开读写权限</string>
+</resources>

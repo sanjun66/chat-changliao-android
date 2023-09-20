@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/comm_page_bg">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.legend.baseui.ui.widget.titlebar.MTitleBar
+            android:id="@+id/title_bar"
+            android:layout_above="@id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1">
+
+            <com.scwang.smart.refresh.layout.SmartRefreshLayout
+                android:id="@+id/swipe_chat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.scwang.smart.refresh.header.ClassicsHeader
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_chat_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never" />
+            </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+            <com.lihang.ShadowLayout
+                android:id="@+id/online_state_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:hl_cornerRadius="15dp"
+                app:hl_shadowColor="@color/black_5_trans"
+                app:hl_shadowLimit="5dp"
+                android:visibility="gone"
+                tools:visibility="visible"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingTop="4dp"
+                    android:paddingBottom="4dp"
+                    android:paddingStart="8dp"
+                    android:paddingEnd="12dp"
+                    android:background="@drawable/shape_15_white">
+                    <ImageView
+                        android:id="@+id/img_online_state"
+                        tools:src="@mipmap/ic_online_dot"
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"/>
+                    <TextView
+                        android:id="@+id/tv_online_state"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="在线"
+                        android:textSize="12sp"
+                        android:textColor="@color/text_grey"/>
+                </LinearLayout>
+            </com.lihang.ShadowLayout>
+
+            <TextView
+                android:id="@+id/unread_message_count"
+                android:layout_width="wrap_content"
+                android:minWidth="120dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="3dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/unread_msg_bg"
+                android:gravity="center"
+                android:layout_gravity="right"
+                android:paddingStart="16dp"
+                android:paddingEnd="7dp"
+                android:maxLines="1"
+                android:textColor="@color/primary_color"
+                android:textSize="14sp"
+                tools:visibility="visible"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:drawableStartCompat="@drawable/ic_unread_msg_arrow" />
+        </FrameLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#D8E5EB" />
+
+        <TextView
+            android:id="@+id/tv_bottom_action"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="@string/forward_action"
+            android:textSize="16sp"
+            android:textColor="@color/text_black"
+            android:gravity="center"
+            android:background="@color/white"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/llt_bottom_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="bottom"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/img_audio"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/ic_audio" />
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="6dp"
+                android:layout_gravity="center_vertical">
+
+                <EditText
+                    android:id="@+id/et_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/shape_5_white"
+                    android:maxLines="8"
+                    android:minHeight="36dp"
+                    android:maxHeight="130dp"
+                    android:paddingStart="13dp"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp" />
+
+                <com.legend.imkit.widget.RecordButton
+                    android:id="@+id/btnAudio"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:background="@drawable/shape_5_white"
+                    android:text="@string/voice_to_say"
+                    android:textColor="@color/text_black"
+                    android:textSize="14sp"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/ivEmo"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/ic_emoji" />
+
+            <ImageView
+                android:id="@+id/ivAdd"
+                android:layout_width="23dp"
+                android:layout_height="23dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@mipmap/ic_add" />
+
+            <com.legend.imkit.widget.StateButton
+                android:id="@+id/btn_send"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:padding="1dp"
+                android:layout_marginRight="10dp"
+                android:text="@string/chat_send"
+                android:textSize="14sp"
+                android:textColor="@color/ui_white"
+                android:visibility="gone"
+                android:layout_marginBottom="5dp"
+                app:normalBackgroundColor="@color/ui_primary"
+                app:pressedBackgroundColor="@color/ui_primary_variant"
+                app:radius="5dp" />
+        </LinearLayout>
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="0.5dp"-->
+<!--            android:background="@color/ui_line_bg" />-->
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+        <!--表情-->
+        <include
+            android:id="@+id/rlEmotion"
+            layout="@layout/include_emoji_layout"
+            android:visibility="gone" />
+
+        <include
+            android:id="@+id/llAdd"
+            layout="@layout/include_add_layout_new"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+</LinearLayout>

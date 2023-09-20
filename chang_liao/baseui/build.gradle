@@ -1,0 +1,71 @@
+import com.legend.versioncontroller.*
+
+plugins {
+    id 'com.legend.versioncontroller'
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion BuildVersionTool.COMPILE_SDK_VERSION as int
+    resourcePrefix 'ui_'
+
+    defaultConfig {
+        minSdkVersion BuildVersionTool.MIN_SDK_VERSION as int
+        targetSdkVersion BuildVersionTool.TARGET_SDK_VERSION as int
+        versionCode 1
+        versionName "1.0.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+    }
+    buildFeatures {
+        dataBinding = true
+    }
+    buildTypes {
+        debug {
+            consumerProguardFiles 'consumer-rules.pro'
+        }
+
+        beta {
+            consumerProguardFiles 'consumer-rules.pro'
+        }
+
+        release {
+            consumerProguardFiles 'consumer-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    api project(':base')
+    api Dependencies.autoSize
+    api RefreshLayoutDependencies.smartrefreshlayout      //核心必须依赖
+    api RefreshLayoutDependencies.smartrefreshlayout_header     //经典刷新头
+    api AndroidXDependencies.constraint
+    api AndroidXDependencies.lifeCycle_extensions
+    api AndroidXDependencies.appcompat
+    api AndroidXDependencies.recyclerview
+    api AndroidXDependencies.coordinatorlayout
+    api KotlinDependencies.kotlin
+    api RouterDependencies.router
+    kapt RouterDependencies.router_compile
+    api Dependencies.lottie
+    api ImageLoaderDependencies.glide
+    implementation Dependencies.utilcodex
+    api Dependencies.coil
+    api Dependencies.recyclerViewAdapter
+}

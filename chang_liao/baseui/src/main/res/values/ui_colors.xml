@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary_material_dark">#00000000</color>
+    <color name="primary_text_disabled_material_dark">#00000000</color>
+
+    <color name="ui_config_color_transparent">#00000000</color>
+    <color name="ui_config_color_black">#212832</color>
+
+    <!-- dialog -->
+    <color name="ui_dialog_title_text_color_black">#333333</color>
+    <color name="ui_dialog_message_text_color">#333333</color>
+    <color name="ui_dialog_action_bg_color">#ffffff</color>
+    <color name="ui_dialog_neutral_action_text_color">#0176FF</color>
+    <color name="ui_dialog_positive_action_text_color">#ED145B</color>
+    <color name="ui_dialog_negative_action_text_color">#999999</color>
+    <color name="ui_dialog_action_divider_color">#E5E5E5</color>
+
+    <!--UILayout-->
+    <color name="ui_layout_color_separator">#E5E5E5</color>
+
+    <color name="ui_color_simple_list_item_pressed">#EFEFEF</color>
+    <color name="ui_color_simple_list_item_unpressed">#FFFFFF</color>
+
+    <color name="ui_fff28187">#FFF28187</color>
+
+    <color name="ui_primary">#26DD9A</color>
+    <color name="ui_primary_variant">#1DBF73</color>
+    <color name="ui_black_001038">#001038</color>
+    <color name="ui_grey_868A9A">#868A9A</color>
+    <color name="ui_white_F9F9FF">#F9F9FF</color>
+    <color name="ui_orange">#FBA709</color>
+    <color name="ui_red_FE2121">#FE2121</color>
+    <color name="ui_black_191C1C">#191C1C</color>
+    <color name="ui_gray_BF191C1C">#BF191C1C</color>
+    <color name="ui_gray_505457">#505457</color>
+    <color name="ui_gray_26191C1C">#26191C1C</color>
+
+    <color name="transparent">#00000000</color>
+</resources>

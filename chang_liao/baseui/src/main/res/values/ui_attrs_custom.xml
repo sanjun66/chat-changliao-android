@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="ui_paddingTopWhenNotTitle" format="dimension" />
+    <attr name="ui_paddingBottomWhenNotContent" format="dimension" />
+    <attr name="ui_dialog_menu_item_check_mark_margin_hor" format="dimension" />
+
+    <declare-styleable name="UITextCommonStyleDef">
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:background" />
+        <attr name="android:gravity" />
+        <attr name="android:paddingTop" />
+        <attr name="android:paddingLeft" />
+        <attr name="android:paddingRight" />
+        <attr name="android:paddingBottom" />
+        <attr name="android:singleLine" />
+        <attr name="android:ellipsize" />
+        <attr name="android:maxLines" />
+        <attr name="android:lineSpacingExtra" />
+        <attr name="android:drawablePadding" />
+        <attr name="android:textColorHint" />
+        <attr name="android:textStyle" />
+    </declare-styleable>
+
+    <declare-styleable name="UIDialogTitleTvCustomDef">
+        <attr name="ui_paddingBottomWhenNotContent" />
+    </declare-styleable>
+
+    <declare-styleable name="UIDialogMessageTvCustomDef">
+        <attr name="ui_paddingTopWhenNotTitle" />
+    </declare-styleable>
+
+    <declare-styleable name="UIDialogActionContainerCustomDef">
+        <attr name="ui_dialog_action_container_justify_content" format="enum">
+            <enum name="start" value="0" />
+            <enum name="end" value="1" />
+            <enum name="stretch" value="2" />
+            <enum name="custom" value="3" />
+        </attr>
+        <attr name="ui_dialog_action_container_custom_space_index" format="integer" />
+        <attr name="ui_dialog_action_height" format="dimension" />
+        <attr name="ui_dialog_action_space" format="dimension" />
+        <attr name="ui_dialog_action_container_top_divider_thickness" format="dimension" />
+        <attr name="ui_dialog_action_divider_thickness" format="dimension" />
+        <attr name="ui_dialog_divider_color" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="UIDialogActionStyleDef">
+        <attr name="android:textColor" />
+        <attr name="android:textSize" />
+        <attr name="android:background" />
+        <attr name="android:gravity" />
+        <attr name="android:minWidth" />
+        <attr name="android:textStyle" />
+        <attr name="ui_dialog_action_button_padding_horizontal" format="dimension" />
+        <attr name="ui_dialog_action_icon_space" format="dimension" />
+        <attr name="ui_dialog_positive_action_text_color" format="color|reference" />
+        <attr name="ui_dialog_negative_action_text_color" format="color|reference" />
+    </declare-styleable>
+</resources>

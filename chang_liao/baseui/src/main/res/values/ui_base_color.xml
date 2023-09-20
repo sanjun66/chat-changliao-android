@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="white">#ffffffff</color>
+    <color name="white_trans_80">#ccffffff</color>
+    <color name="ui_white">#ffffffff</color>
+    <color name="ui_black">#000000</color>
+
+    <color name="ui_tc_white">#ffffffff</color>
+    <color name="ui_color_button_and_text">#363A41</color>
+    <color name="ui_color_button_and_text_disable">#C9C9C9</color>
+    <color name="ui_tc_black">#000000</color>
+    <color name="ui_tc_grey">#999999</color>
+    <color name="ui_tc_red">#ED145B</color>
+    <color name="ui_fcfcfc">#ccfcfcfc</color>
+    <color name="ui_tc_black333">#333333</color>
+    <color name="ui_transparent">#00000000</color>
+    <color name="ui_0076ff">#0076FF</color>
+    <color name="ui_color_999999">#999999</color>
+    <color name="ui_black_2b2e34">#2b2e34</color>
+    <color name="ui_fb3b4b">#fb3b4b</color>
+    <color name="ui_color_f0f0f0">#F0F0F0</color>
+    <color name="ui_line_bg">#CFDDE3</color>
+    <color name="ui_gray_bg">#F7F7F7</color>
+    <color name="ui_3300">#33000000</color>
+    <color name="ui_black_363a41">#363A41</color>
+
+
+    <!-- *************如果包含下面颜色引用的 都需要检查*************** -->
+    <color name="ui_bg_ffabc1">#FFABC1</color>
+    <color name="ui_tc_light_red">#F54B78</color>
+
+
+</resources>

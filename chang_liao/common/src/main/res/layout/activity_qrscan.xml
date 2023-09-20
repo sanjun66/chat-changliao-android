@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rlparent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/comm_page_bg">
+
+    <androidx.camera.view.PreviewView
+        android:id="@+id/pvCamera"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/title_bar"/>
+
+    <com.legend.baseui.ui.widget.titlebar.MTitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/comm_page_bg"
+        android:layout_marginTop="34dp"/>
+
+</RelativeLayout>

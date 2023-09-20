@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/biv_pic"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:layout_marginStart="0dp"
+            app:riv_corner_radius="@dimen/avatar_radius"
+            />
+<!--        <com.legend.imkit.widget.BubbleImageView-->
+<!--            android:id="@+id/biv_pic1"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_marginStart="0dp"-->
+<!--            android:adjustViewBounds="true"-->
+<!--            android:scaleType="centerCrop"-->
+<!--            android:transitionName="sharedView"-->
+<!--            app:angle="6dp"-->
+<!--            app:arrowHeight="8dp"-->
+<!--            app:arrowLocation="right"-->
+<!--            app:arrowPosition="15dp"-->
+<!--            app:arrowWidth="5dp" />-->
+
+        <LinearLayout
+            android:id="@+id/llt_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ProgressBar
+                android:id="@+id/rc_progress"
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_gravity="center"
+                android:indeterminateTint="@color/primary_color" />
+
+<!--            <ProgressBar-->
+<!--                android:id="@+id/rc_progress"-->
+<!--                android:layout_width="18dp"-->
+<!--                android:layout_height="18dp"-->
+<!--                style="?android:attr/progressBarStyle"-->
+<!--                android:indeterminateDrawable="@drawable/rc_progress_sending_style"/>-->
+
+            <TextView
+                android:id="@+id/tv_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="0%"
+                android:textColor="@color/white"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

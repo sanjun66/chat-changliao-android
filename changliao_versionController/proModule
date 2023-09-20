@@ -1,0 +1,112 @@
+#!/bin/sh
+
+# 该文件放在主项目根目录
+cd ..
+
+# 初始化Git 仓库
+
+##  业务组件
+
+
+##  功能组件
+# 公用组件库
+MODULE_NAME+=("baseframework")
+MODULE_PATH+=("git@114.55.74.197:android-modularization/baseframework.git")
+
+# 公用UI库
+MODULE_NAME+=("YPCommonUI")
+MODULE_PATH+=("git@114.55.74.197:android-modularization/YPCommonUI.git")
+
+
+# 切换分支
+BRANCH_NAME=""
+# 新建分支
+NEW_BRANCH_NAME=""
+# 新增tag：封包时使用
+TAG_NAME=""
+# Tag说明
+TAG_MESSAGE=""
+# 新建分支并推送远端
+NEW_BRANCH_AND_PUSH=""
+# 合并分支
+MERGE_BRANCH_NAME=""
+# 推送分支
+PUSH_BRANCH_NAME=""
+while getopts "b:t:m:c:n:h:p:" opt
+do
+    case $opt in
+        b)
+        BRANCH_NAME=$OPTARG
+        ;;
+        c)
+        NEW_BRANCH_NAME=$OPTARG
+        ;;
+        t)
+        TAG_NAME=$OPTARG
+        ;;
+        m)
+        TAG_MESSAGE=$OPTARG
+        ;;
+        n)
+        NEW_BRANCH_AND_PUSH=$OPTARG
+        ;;
+        h)
+        MERGE_BRANCH_NAME=$OPTARG
+        ;;
+        p)
+        PUSH_BRANCH_NAME=$OPTARG
+        ;;
+        ?)
+        echo "未知参数"
+        exit 1;;
+    esac
+done
+
+
+#   如果没有设置Tag说明，使用 Tag名 作为说明
+if [ -z "$TAG_MESSAGE" ]; then 
+    TAG_MESSAGE="$TAG_NAME"
+fi
+
+# 拉取更新代码
+for((i=0;i<${#MODULE_PATH[@]};i++));
+do
+if [ ! -d ${MODULE_NAME[i]} ]; then
+    git clone ${MODULE_PATH[i]}
+fi
+cd ${MODULE_NAME[i]}
+git fetch -p
+
+# 切换分支
+if [ -n "$BRANCH_NAME" ]; then 
+    git checkout $BRANCH_NAME
+fi
+git pull
+
+# 新建并且换分支
+if [ -n "$NEW_BRANCH_NAME" ]; then 
+    git checkout -b $NEW_BRANCH_NAME
+fi
+
+# 新增 Tag
+if [ -n "$TAG_NAME" ]; then 
+    git tag -a $TAG_NAME -m $TAG_MESSAGE
+    # git push origin $TAG_NAME
+fi
+if [ -n "$NEW_BRANCH_AND_PUSH" ]; then
+    git pull
+    git checkout -b $NEW_BRANCH_AND_PUSH
+    git push origin $NEW_BRANCH_AND_PUSH
+    git checkout dev
+    git branch -D $NEW_BRANCH_AND_PUSH
+    git checkout $NEW_BRANCH_AND_PUSH
+fi
+if [ -n "$MERGE_BRANCH_NAME" ]; then
+    git pull
+    git merge origin/$MERGE_BRANCH_NAME
+fi
+if [ -n "$PUSH_BRANCH_NAME" ]; then
+    git push origin $PUSH_BRANCH_NAME
+fi
+cd ..
+done;

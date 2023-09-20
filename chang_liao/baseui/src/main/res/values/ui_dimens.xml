@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ui dialog -->
+    <dimen name="ui_dialog_radius">2dp</dimen>
+
+    <dimen name="ui_title_text">22sp</dimen>
+    <dimen name="ui_subtitle_text">20sp</dimen>
+</resources>

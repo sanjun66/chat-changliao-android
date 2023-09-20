@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="seal_main_title_popup_width">160dp</dimen>
+    <dimen name="seal_main_title_popup_item_height_v2">56dp</dimen>
+    <dimen name="seal_main_title_popup_item_drawable_padding">10dp</dimen>
+
+</resources>

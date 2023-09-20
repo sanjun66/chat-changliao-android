@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="75dp">
+
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/riv_avatar"
+            android:layout_width="@dimen/avatar_size1"
+            android:layout_height="@dimen/avatar_size1"
+            android:src="@mipmap/ic_user_avatar"
+            app:riv_oval="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginTop="12dp"
+            android:layout_marginStart="25dp" />
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_unread_num"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:minWidth="15dp"-->
+<!--            android:layout_alignParentEnd="true"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            tools:text="1"-->
+<!--            android:background="@drawable/ui_shape_unread"-->
+<!--            android:textSize="10sp"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:gravity="center"-->
+<!--            android:visibility="gone"-->
+<!--            app:layout_constraintTop_toTopOf="@id/riv_avatar"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/riv_avatar"-->
+<!--            android:layout_marginTop="-6dp"-->
+<!--            android:layout_marginEnd="-4dp"/>-->
+
+        <TextView
+            android:id="@+id/tv_red_dot"
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:background="@drawable/ui_shape_unread"
+            app:layout_constraintTop_toTopOf="@id/riv_avatar"
+            app:layout_constraintEnd_toEndOf="@id/riv_avatar"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/llt_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            app:layout_constraintStart_toEndOf="@id/riv_avatar"
+            app:layout_constraintTop_toTopOf="@id/riv_avatar"
+            app:layout_constraintEnd_toStartOf="@id/tv_time"
+            android:layout_marginStart="12dp"
+            android:layout_marginEnd="15dp">
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="name"
+                android:textSize="15sp"
+                android:textColor="@color/text_black"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:layout_marginEnd="10dp"/>
+
+            <ImageView
+                android:id="@+id/img_disturb"
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                android:src="@mipmap/ic_msg_disturb"
+                android:gravity="center"/>
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tv_mention"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/mention_me_tip"
+            android:textSize="13sp"
+            android:textColor="@color/ui_red_FE2121"
+            app:layout_constraintStart_toStartOf="@id/llt_name"
+            app:layout_constraintTop_toTopOf="@id/tv_content"
+            app:layout_constraintBottom_toBottomOf="@id/tv_content"
+            app:layout_constraintEnd_toStartOf="@id/tv_content"
+            android:layout_marginEnd="4dp"
+            tools:visibility="visible"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="消息缩略消息缩略"
+            android:textSize="13sp"
+            android:textColor="@color/text_grey"
+            android:maxLines="1"
+            android:ellipsize="end"
+            app:layout_constraintStart_toEndOf="@id/tv_mention"
+            app:layout_constraintEnd_toStartOf="@id/tv_time"
+            app:layout_constraintTop_toBottomOf="@id/llt_name"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="10dp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12:24"
+            android:textSize="9sp"
+            android:textColor="@color/text_msg_time"
+            app:layout_constraintTop_toTopOf="@id/riv_avatar"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="15dp" />
+
+        <TextView
+            android:id="@+id/tv_unread_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="20dp"
+            android:minHeight="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            tools:text="1"
+            android:background="@drawable/ui_shape_unread_green"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            tools:visibility="visible"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="@id/tv_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="15dp"/>
+
+        <View
+            style="@style/line2"
+            android:layout_width="0dp"
+            app:layout_constraintStart_toStartOf="@id/llt_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

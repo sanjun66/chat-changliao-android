@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/ll_voice_content"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:adjustViewBounds="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:minWidth="52dp"
+            android:maxWidth="230dp"
+            >
+            <ImageView
+                android:id="@+id/img_voice_left"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rc_voice_receive_play3"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:textColor="@color/text_grey"
+                android:layout_gravity="center_vertical"
+                android:gravity="start"
+                tools:text="5''"/>
+
+            <ImageView
+                android:id="@+id/img_voice_right"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/rc_voice_send_play3"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/img_voice_unread"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginStart="8dp"
+            android:src="@drawable/rc_voice_unread"
+            android:layout_gravity="center_vertical"
+            tools:visibility="visible"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/pb_progress_right"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="8dp"
+            android:indeterminateDrawable="@drawable/rc_progress_sending_style"
+            tools:visibility="visible"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</layout>

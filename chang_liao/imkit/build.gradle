@@ -1,0 +1,67 @@
+import com.legend.versioncontroller.*
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'com.legend.versioncontroller'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.legend.imkit'
+    compileSdk BuildVersionTool.COMPILE_SDK_VERSION as int
+
+    defaultConfig {
+        minSdk BuildVersionTool.MIN_SDK_VERSION as int
+        targetSdk BuildVersionTool.TARGET_SDK_VERSION as int
+
+//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+
+        kapt {
+            arguments {
+                arg("AROUTER_MODULE_NAME", project.getName())
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+    dataBinding {
+        enabled = true
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation KotlinDependencies.kotlin_core
+    implementation AndroidXDependencies.appcompat
+    implementation AndroidXDependencies.material
+//    testImplementation 'junit:junit:4.13.2'
+//    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+//    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    implementation project(':common')
+    implementation RouterDependencies.router
+    api QBDependencies.qb_sdk_chat
+    api QBDependencies.qb_sdk_content
+    api QBDependencies.qb_sdk_message
+    api QBDependencies.qb_sdk_video
+    implementation 'androidx.emoji2:emoji2:1.1.0'
+    kapt RouterDependencies.router_compile
+//    implementation project(':customcamera')
+//    implementation project(':weiXinRecorded')
+//    implementation "jt.library.wheel:camera:1.1.9"
+    api 'com.otaliastudios:cameraview:2.7.2'
+
+}

@@ -1,0 +1,72 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+    }
+    dependencies {
+        // 因为使用的 Kotlin 需要需要添加 Kotlin 插件
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.8.0"
+    }
+}
+apply plugin: 'kotlin'
+apply plugin: 'java-gradle-plugin'
+repositories {
+    // 需要添加 jcenter 否则会提示找不到 gradlePlugin
+    google()
+    jcenter()
+    mavenCentral()
+    maven { url "https://jitpack.io" }
+}
+
+//task renameConfig(type: Copy) {
+//    def configfile = file('src/main/java/com/basestonedata/plugin/versioncontroller/BuildSwitchConfig.kt')
+//    def bkfile = file('./BuildSwitchConfig.bk')
+//    if (!configfile.exists()) {
+//        from './'
+//        include 'BuildSwitchConfig.bk'
+//        into 'src/main/java/com/basestonedata/plugin/versioncontroller/'
+//        rename('BuildSwitchConfig.bk', 'BuildSwitchConfig.kt')
+//    } else {
+//        def lines = bkfile.readLines()[-1]
+//        def configLine = configfile.readLines()[-1]
+//        if (!lines.equals(configLine)) {
+//            from './'
+//            include 'BuildSwitchConfig.bk'
+//            into 'src/main/java/com/basestonedata/plugin/versioncontroller/'
+//            rename('BuildSwitchConfig.bk', 'BuildSwitchConfig.kt')
+//        }
+//
+//    }
+//
+//}
+//compileKotlin.dependsOn(renameConfig)
+
+
+dependencies {
+    implementation gradleApi()
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.8.0"
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "11"
+    }
+}
+
+gradlePlugin {
+    plugins {
+        version {
+            // 在 app 模块需要通过 id 引用这个插件
+            id = 'com.legend.versioncontroller'
+            // 实现这个插件的类的路径
+            implementationClass = 'com.legend.versioncontroller.VersionPlugin'
+        }
+    }
+}
